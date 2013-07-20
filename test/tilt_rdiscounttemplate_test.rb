@@ -34,6 +34,14 @@ begin
       p smarty.to_html
 
       p :through_tilt
+      $LOADED_FEATURES.grep(/rdiscount|bluecloth/).grep(/\.(so|bundle)$/).each do |file|
+        begin
+          puts "nm -g #{file}"
+          system("nm", "-g", file)
+        rescue
+        end
+      end
+      p :done
       template = Tilt::RDiscountTemplate.new(:smart => true) { |t|
         "OKAY -- 'Smarty Pants'" }
       assert_equal "<p>OKAY &ndash; &lsquo;Smarty Pants&rsquo;</p>\n",
