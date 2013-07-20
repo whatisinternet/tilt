@@ -11,7 +11,7 @@ group :engines do
   end
 
   platform :mri do
-    gem 'bluecloth'
+    #gem 'bluecloth'
   end
 end
 

@@ -1,6 +1,5 @@
 before_install:
   - gem install rdiscount --verbose
-  - gem install bluecloth --verbose
 
 language: ruby
 rvm:
