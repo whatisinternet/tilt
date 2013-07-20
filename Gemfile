@@ -9,5 +9,10 @@ group :engines do
   platform :ruby do
     gem 'rdiscount', '>= 2.1.6' if RUBY_VERSION != '1.9.2'
   end
+
+  platform :mri do
+    gem 'therubyracer'
+    gem 'bluecloth'
+  end
 end
 
