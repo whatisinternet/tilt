@@ -11,7 +11,6 @@ group :engines do
   end
 
   platform :mri do
-    gem 'therubyracer'
     gem 'bluecloth'
   end
 end
