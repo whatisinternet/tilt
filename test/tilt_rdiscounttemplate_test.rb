@@ -36,8 +36,8 @@ begin
       p :through_tilt
       $LOADED_FEATURES.grep(/rdiscount|bluecloth/).grep(/\.(so|bundle)$/).each do |file|
         begin
-          puts "nm -g #{file}"
-          system("nm", "-g", file)
+          puts "ldd #{file}"
+          system("ldd", file)
         rescue
         end
       end
