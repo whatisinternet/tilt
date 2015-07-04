@@ -20,6 +20,8 @@ group :engines do
   gem 'liquid'
   gem 'markaby'
   gem 'maruku'
+  gem 'mustache', '~> 0.99' if RUBY_VERSION =~ /1\.9.*/
+  gem 'mustache', '0.99.6' if RUBY_VERSION =~ /1\.8.*/
   gem 'nokogiri' if RUBY_VERSION > '1.9.2'
   gem 'radius'
   gem 'sass'
